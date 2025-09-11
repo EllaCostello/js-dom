@@ -8,3 +8,9 @@ Clone the forked repo to your local machine using the command:
 ```bash
 git clone git@github.com:YOUR_USERNAME/js-dom.git
 ```
+
+## 3. Open the project
+Open the project in your code editor (vs code or IntelliJ).
+
+## 4. Run the live server
+Run the live server (using the extension in vs code).
