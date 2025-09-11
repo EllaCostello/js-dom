@@ -13,4 +13,4 @@ git clone git@github.com:YOUR_USERNAME/js-dom.git
 Open the project in your code editor (vs code or IntelliJ).
 
 ## 4. Run the live server
-Run the live server (using the extension in vs code).
+Open the `index.html` in the root folder, and run it with the "Live Server" extension.
