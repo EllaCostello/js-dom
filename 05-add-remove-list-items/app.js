@@ -28,16 +28,30 @@ window.addEventListener("load", initApp);
 
 function initApp() {    
 	// TODO: Add event listeners to #addBtn and #removeBtn
+	const addBtn = document.querySelector("#addBtn");
+	addBtn.addEventListener('click', handleAddClick);
+
+	const removeBtn = document.querySelector("#removeBtn");
+	removeBtn.addEventListener('click', handleRemoveClick);
 }
 
 function getNextItemNo() {
     // TODO: return the number based one the current list size.
+	const list = document.querySelectorAll("#itemList li");
+	return list.length;
 }
 
 function handleAddClick() {
 	// TODO: Add a new <li> to #itemList, with the text "Item N" where N is the new item number
+	const newLi = document.createElement('li');
+	newLi.textContent = "Item " + (getNextItemNo() + 1);
+	const list = document.querySelector("#itemList");
+	list.appendChild(newLi);
 }
 
 function handleRemoveClick() {
 	// TODO: Remove the last <li> from #itemList
+	const list = document.querySelector("#itemList");
+	list.removeChild(list.lastChild);
+
 }

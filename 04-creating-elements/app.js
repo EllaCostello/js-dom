@@ -34,9 +34,58 @@ function initApp() {
   // Hide instructions when done
   // document.querySelector("#instructions").classList.add("hidden");
   // TODO: Create the above DOM Structure and add it to the <body>
+  document.querySelector("#instructions").classList.add("hidden");
+  document.querySelector("#toggleBtn").addEventListener('click', createProfileSection, {once: true});
+  
 }
 
 
 function createProfileSection() {
-    
+  const profileContainer = document.createElement('div');
+  profileContainer.id = "profile-container";
+  document.body.appendChild(profileContainer);
+  
+  const profileSection = document.createElement('section');
+  profileSection.id = "profile-section";
+  profileContainer.appendChild(profileSection);
+
+  const h1 = document.createElement('h1');
+  h1.textContent = "Profile";
+  profileSection.appendChild(h1);
+
+  const profileCard = document.createElement('article');
+  profileCard.className = "profile-card";
+  profileSection.appendChild(profileCard);
+
+  const img = document.createElement('img');
+  img.src = "https://randomuser.me/api/portraits/men/1.jpg";
+  img.alt = "Profile picture";
+  profileCard.appendChild(img);
+
+  const h2 = document.createElement('h2');
+  h2.textContent = "John Doe";
+  profileCard.appendChild(h2);
+
+  const p = document.createElement('p');
+  p.textContent = "Web developer and coffee enthusiast.";
+  profileCard.appendChild(p);
+
+
+  const ul = document.createElement('ul');
+  profileCard.appendChild(ul);
+
+
+  const location = document.createElement('li');
+  location.textContent = "Location: Copenhagen";
+  ul.appendChild(location);
+
+  const language = document.createElement('li');
+  language.textContent = "Favorite Language: JavaScript";
+  ul.appendChild(language);
+
+
+  const hobby = document.createElement('li');
+  hobby.textContent = "Hobby: Cycling";
+  ul.appendChild(hobby);
+
 }

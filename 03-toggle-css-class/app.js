@@ -13,12 +13,20 @@ window.addEventListener("load", initApp);
 
 function initApp() {
     // TODO: Add event listeners to #square and #circle
+    let square = document.querySelector("#square");
+    let circle = document.querySelector("#circle");
+
+    square.addEventListener('click', (handleSquareClick(square)));
+
+    circle.addEventListener('click', (handleCircleClick(circle)));
 }
 
-function handleSquareClick() {
+function handleSquareClick(square) {
     // TODO: Toggle the "tilt" class on #square
+    square.classList.toggle('tilt');
 }
 
-function handleCircleClick() {
+function handleCircleClick(circle) {
     // TODO: Toggle the "move" class on #circle
+    circle.classList.toggle('move');
 }
